@@ -1,7 +1,9 @@
 "use strict";
 
 const doItAll = require("./data");
+const eventing = require("./events");
 
-doItAll();
+doItAll.initializer();
+eventing.filterEvent();
 
 

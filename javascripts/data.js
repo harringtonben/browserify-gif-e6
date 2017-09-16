@@ -26,8 +26,8 @@ const combineArrays = (categories) => {
 	categories.forEach((category) => {
 		gifArray.forEach((gif) => {
 			if (gif.category === category.id) {
-				gif.categoryname = category.name;
-				gif.categorydataname = category.dataname;
+				gif.categoryName = category.name;
+				gif.categoryDataName = category.dataName;
 			}
 		});
 	});
@@ -40,4 +40,8 @@ const initializer = () => {
 	loadGifs(whenGifLoads, errorFunction);
 };
 
-module.exports = initializer;
+const getGifs = () => {
+	return gifArray;
+};
+
+module.exports = {initializer, getGifs};
